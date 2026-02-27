@@ -311,9 +311,37 @@ body
 	display: none;
 }
 
+
 /* ========================
-   My P. Code
+My P. Code
 ======================== */
+#testimonials > div > div.text-center.mb-8 > h2, #testimonials > div > div.mx-auto.max-w-sm.px-4.py-20.font-sans.antialiased.md\:max-w-4xl.md\:px-8.lg\:px-12 > div > div.flex.flex-col.justify-between.py-4 > div:nth-child(1) > h3, #contact > div > div.text-center.mb-12 > h2, #contact > div > div.\@container > div > div.\@container\/info.space-y-6 > h3, #contact > div > div.\@container > div > div.\@container\/form.bg-card.border.rounded-lg.p-4.\@md\/form\:p-6 > h3, #contact > div > div.\@container > div > div.\@container\/info.space-y-6 > div:nth-child(2) > div.min-w-0.relative.-top-0\.5 > h4, #contact > div > div.\@container > div > div.\@container\/info.space-y-6 > div:nth-child(3) > div.min-w-0.relative.-top-0\.5 > h4,#contact > div > div.\@container > div > div.\@container\/form.bg-card.border.rounded-lg.p-4.\@md\/form\:p-6 > form > div:nth-child(1) > label, #contact > div > div.\@container > div > div.\@container\/form.bg-card.border.rounded-lg.p-4.\@md\/form\:p-6 > form > div:nth-child(2) > label,#contact > div > div.\@container > div > div.\@container\/form.bg-card.border.rounded-lg.p-4.\@md\/form\:p-6 > form > div:nth-child(3) > label, #contact > div > div.\@container > div > div.\@container\/form.bg-card.border.rounded-lg.p-4.\@md\/form\:p-6 > form > div:nth-child(4) > label,#name, #contact > div > div.\@container > div > div.\@container\/form.bg-card.border.rounded-lg.p-4.\@md\/form\:p-6 > form  {
+	color: #2a65b2!important;
+}
+
+#education > div > div.text-center.mb-16 > h2 {
+	color: #893E70!important;
+}
+
+#certifications > div > div.text-center.mb-16 > h2 {
+	color: #1CAE86!important;
+}
+
+#contact > div > div.\@container > div > div.\@container\/form.bg-card.border.rounded-lg.p-4.\@md\/form\:p-6 > form > button {
+	background-color: #2a65b2!important;
+	border: 2px solid rgba(0, 43, 99, 0.2);
+	color: #fff;
+}
+
+#contact > div > div.\@container > div > div.\@container\/info.space-y-6 > div:nth-child(2) > div.w-10.h-10.\@md\/info\:w-12.\@md\/info\:h-12.rounded-lg.bg-primary\/10.flex.items-center.justify-center.shrink-0 > span > img.w-6.h-6.hidden.relative.bottom-0\.5.dark\:inline-block.ml-2.reponsive_icon, #contact > div > div.\@container > div > div.\@container\/info.space-y-6 > div:nth-child(2) > div.w-10.h-10.\@md\/info\:w-12.\@md\/info\:h-12.rounded-lg.bg-primary\/10.flex.items-center.justify-center.shrink-0 > span > img.w-6.h-6.inline-block.relative.bottom-0\.5.ml-2.dark\:hidden.reponsive_icon {
+	display: relative;
+	right: 3;
+}
+
+#contact > div > div.\@container > div > div.\@container\/info.space-y-6 > div:nth-child(3) > div.w-10.h-10.\@md\/info\:w-12.\@md\/info\:h-12.rounded-lg.bg-primary\/10.flex.items-center.justify-center.shrink-0 > span > img.w-7.h-7.hidden.relative.dark\:inline-block.ml-2.reponsive_icon, #contact > div > div.\@container > div > div.\@container\/info.space-y-6 > div:nth-child(3) > div.w-10.h-10.\@md\/info\:w-12.\@md\/info\:h-12.rounded-lg.bg-primary\/10.flex.items-center.justify-center.shrink-0 > span > img.w-7.h-7.inline-block.relative.ml-2.dark\:hidden.reponsive_icon {
+	right: 3.5;
+	bottom: 1.2
+}
 
 body > div.group\/sidebar-wrapper.has-data-\[variant\=inset\]\:bg-sidebar.flex.min-h-svh.w-full
 	> div.hidden.md\:block.fixed.z-30.transition-all.duration-300.pointer-events-none.group\/dock.bottom-4.md\:left-4.md\:translate-x-0.lg\:left-1\/2.lg\:-translate-x-1\/2
@@ -407,6 +435,32 @@ body {
 		width: 100%;
 	}
 
+/* ========================
+   Icones
+======================== */
+
+#testimonials > div > div.text-center.mb-8 > div > p::before, #education > div > div.text-center.mb-16 > div > p::before, #certifications > div > div.text-center.mb-16 > div > p::before, #services > div > div.text-center.mb-16 > p::before, #contact > div > div.text-center.mb-12 > div > p::before {
+content: "";
+  display: inline-block;
+
+  width: 23px;   /* equivalente ao w-5.75 */
+  height: 23px;  /* equivalente ao h-5.75 */
+
+  background-image: url("/translate.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: relative;
+  top: 3.5px;
+  right: 4px;
+}
+
+.dark #testimonials > div > div.text-center.mb-8 > div > p::before, .dark #education > div > div.text-center.mb-16 > div > p::before, .dark #certifications > div > div.text-center.mb-16 > div > p::before, #services > div > div.text-center.mb-16 > p::before, #contact > div > div.text-center.mb-12 > div > p::before {
+  background-image: url('/translate_whitee.png');
+}
+
+
 
 /* ========================
    Media Querry all
@@ -448,6 +502,25 @@ body {
 	#subject,
 	#message {
 		width: 100%;
+	}
+}
+
+@media (min-width: 816px) and (max-width: 991px) {
+	#home > div.relative.z-10.container.mx-auto.max-w-6xl > div > div > div > span > span.relative.inline-block.overflow-hidden.rounded-lg.border.border-foreground.bg-foreground\/10.px-3.py-1.backdrop-blur-sm {
+		font-size: 25px;
+	}
+}
+
+@media (max-width: 495px) {
+	#home > div.relative.z-10.container.mx-auto.max-w-6xl > div > div > div > span > span.relative.inline-block.overflow-hidden.rounded-lg.border.border-foreground.bg-foreground\/10.px-3.py-1.backdrop-blur-sm {
+		font-size: 27px;
+	}
+}
+
+@media (max-width: 452px) {
+	.translate_testmonial {
+		left: 12px;
+		bottom: 13.5px;
 	}
 }
 

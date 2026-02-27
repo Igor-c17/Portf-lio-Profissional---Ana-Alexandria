@@ -29,10 +29,10 @@ export const LayoutTextFlip = ({
 			<motion.span layoutId="subtext" className="inline-block">
 				{text}
 			</motion.span>
-
+ {/* Trocar o motion abaixo para a cor do h1 padrão */}
 			<motion.span
 				layout
-				className="relative inline-block overflow-hidden rounded-lg border border-primary/20 bg-primary/10 px-3 py-1 backdrop-blur-sm"
+				className="relative inline-block overflow-hidden rounded-lg border border-foreground bg-foreground/10 px-3 py-1 backdrop-blur-sm"
 			>
 				<AnimatePresence mode="popLayout">
 					<motion.span
@@ -49,7 +49,7 @@ export const LayoutTextFlip = ({
 							ease: "easeInOut",
 						}}
 						className={cn(
-							"inline-block whitespace-nowrap font-semibold text-primary",
+							"inline-block whitespace-nowrap font-semibold text-foreground",
 						)}
 					>
 						{words[currentIndex]}

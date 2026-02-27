@@ -60,14 +60,16 @@ export async function CertificationsSection() {
 						/>
 						{/* Ícone Escuro */}
 						<Icon
-							src="/faculdade_rose.png"
+							src="/faculdade.png"
 							alt="Disponibilidade"
 							className="w-8.5 h-8.5 hidden relative -bottom-0.5 -right-1 dark:inline-block  ml-2 responsive_icon_certification"
 						/>
 					</h2>
-					<p className="text-xl text-muted-foreground">
-						Credenciais e certificações profissionais
+					<div className="flex items-center justify-center">
+					<p className="text-xl text-muted-foreground font-semibold">
+						Professional credentials and certifications
 					</p>
+					</div>
 				</div>
 
 				<div className="@container">

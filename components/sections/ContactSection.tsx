@@ -29,21 +29,22 @@ export async function ContactSection() {
 						Entre em contato
 						{/* Ícone Claro */}
 						<Icon
-							src="/info.png"
+							src="/phone-book.png"
 							alt="Disponibilidade"
-							className="w-8 h-8 inline-block relative bottom-0.75 -right-0.5 ml-2 dark:hidden responsive_icon_contact"
+							className="w-7.5 h-7.5 inline-block relative bottom-0.5 -left-0.5 ml-2 dark:hidden responsive_icon_contact"
 						/>
 						{/* Ícone Escuro */}
 						<Icon
-							src="/info_rose.png"
+							src="/phone-book.png"
 							alt="Disponibilidade"
-							className="w-8 h-8 hidden relative bottom-0.75 -right-0.5 dark:inline-block  ml-2 responsive_icon_contact"
+							className="w-7.5 h-7.5 hidden relative bottom-0.5 -left-0.5 dark:inline-block  ml-2 responsive_icon_contact"
 						/>
 					</h2>
-					<p className="text-xl text-muted-foreground">
-						Onde quer que você esteja no mundo, vamos colaborar no seu próximo
-						projeto.
+					<div className="flex items-center justify-center">
+					<p className="text-xl text-muted-foreground font-semibold">
+						Wherever you are in the world, let's collaborate on your next project.
 					</p>
+					</div>
 				</div>
 
 				<div className="@container">
@@ -60,16 +61,16 @@ export async function ContactSection() {
 										<span className="text-xl @md/info:text-2xl">
 											{/* Ícone Claro */}
 											<Icon
-												src="/correspondencia.png"
+												src="/email_blue.png"
 												alt="Disponibilidade"
-												className="w-8 h-8 inline-block relative right1 ml-2 dark:hidden reponsive_icon"
+												className="w-6 h-6 inline-block relative bottom-0.5 ml-2 dark:hidden reponsive_icon"
 											/>
 
 											{/* Ícone Escuro */}
 											<Icon
-												src="/correspondencia_rose.png"
+												src="/email_blue.png"
 												alt="Disponibilidade"
-												className="w-8 h-8 hidden relative right-1 dark:inline-block  ml-2 reponsive_icon"
+												className="w-6 h-6 hidden relative bottom-0.5 dark:inline-block  ml-2 reponsive_icon"
 											/>
 										</span>
 									</div>
@@ -93,16 +94,16 @@ export async function ContactSection() {
 										<span className="text-xl @md/info:text-2xl">
 											{/* Ícone Claro */}
 											<Icon
-												src="/telefone.png"
+												src="/smartphone.png"
 												alt="Disponibilidade"
-												className="w-7 h-7 inline-block relative right-1 ml-2 dark:hidden reponsive_icon"
+												className="w-7 h-7 inline-block relative ml-2 dark:hidden reponsive_icon"
 											/>
 
 											{/* Ícone Escuro */}
 											<Icon
-												src="/telefone_rose.png"
+												src="/smartphone.png"
 												alt="Disponibilidade"
-												className="w-7 h-7 hidden relative bottom-0.25 right-1 dark:inline-block  ml-2 reponsive_icon"
+												className="w-7 h-7 hidden relative dark:inline-block  ml-2 reponsive_icon"
 											/>
 										</span>
 									</div>

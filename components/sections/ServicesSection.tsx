@@ -88,8 +88,8 @@ export async function ServicesSection() {
 							className="w-9 h-9 hidden relative bottom-1.25 -right-1 dark:inline-block  ml-2 responsive_icon_services"
 						/>
 					</h2>
-					<p className="text-xl text-muted-foreground">
-						O que eu posso fazer por você
+					<p className="text-xl text-muted-foreground font-semibold">
+						What I can do for you
 					</p>
 				</div>
 

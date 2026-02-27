@@ -27,7 +27,7 @@ export async function AboutSection() {
 			<div className="container mx-auto max-w-4xl">
 				<div className="text-center mb-12">
 					<h2 className="text-4xl md:text-5xl font-bold mb-4">
-						Sobre mim
+						Sobre Mim
 						{/* Ícone Claro */}
 						<Icon
 							src="/flor-de-lotus.png"
@@ -41,7 +41,21 @@ export async function AboutSection() {
 							className="w-8 h-8 hidden relative -right-[2px] -top-[1.9px] dark:inline-block  ml-2 responsive_icon"
 						/>
 					</h2>
-					<p className="text-xl text-muted-foreground">Conheça-me melhor</p>
+					<div className="flex items-center justify-center">
+  						<Icon
+   						 	src="/translate.png"
+    						alt="Disponibilidade"
+    						className="w-5.75 h-5.75 relative bottom-px left-1 dark:hidden"
+  						/>
+  						<Icon
+    						src="/translate_whitee.png"
+    						alt="Disponibilidade"
+    						className="w-5.75 h-5.75 relative bottom-px left-1 hidden dark:inline-block"
+  						/>
+  						<p className="text-xl text-muted-foreground ml-2 font-semibold">
+    						Get to know me better
+  						</p>
+					</div>
 				</div>
 
 				<div className="prose prose-lg dark:prose-invert max-w-none">
@@ -70,11 +84,7 @@ export async function AboutSection() {
 									),
 								},
 								marks: {
-									strong: ({ children }) => (
-										<strong className="font-semibold text-foreground">
-											{children}
-										</strong>
-									),
+									
 									em: ({ children }) => <em className="italic">{children}</em>,
 									link: ({ children, value }) => {
 										const href = value?.href || "";

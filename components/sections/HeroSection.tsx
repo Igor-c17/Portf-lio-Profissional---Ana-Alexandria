@@ -4,7 +4,7 @@ import { sanityFetch } from "@/sanity/lib/live";
 import { Icon } from "../Icon";
 import { ProfileImage } from "../ProfileImage";
 import { BackgroundRippleEffect } from "../ui/background-ripple-effect";
-import { LayoutTextFlip } from "../ui/layout-text-flip";
+import { LayoutTextFlip } from "../app-router";
 
 const HERO_QUERY = defineQuery(`*[_id == "singleton-profile"][0]{
   firstName,
@@ -41,7 +41,7 @@ async function HeroSection() {
 					<div className="grid grid-cols-1 @3xl:grid-cols-2 gap-8 @lg:gap-12 items-center">
 						{/* Text Content */}
 						<div className="@container/hero space-y-4 @md/hero:space-y-6">
-							<h1 className="text-4xl @md/hero:text-5xl @lg/hero:text-7xl font-bold tracking-tight">
+							<h1 className="text-4xl @md/hero:text-5xl @lg/hero:text-7xl font-bold tracking-tight text-primary">
 								{profile.firstName}{" "}
 								<span className="text-primary">{profile.lastName}</span>
 							</h1>

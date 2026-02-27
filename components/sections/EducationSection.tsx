@@ -60,23 +60,25 @@ export async function EducationSection() {
 			<div className="container mx-auto max-w-6xl relative z-10">
 				<div className="text-center mb-16">
 					<h2 className="text-4xl md:text-5xl font-bold mb-4">
-						Formação acadêmica
+						Formação Acadêmica
 						{/* Ícone Claro */}
 						<Icon
-							src="/mortarboard.png"
+							src="/education.png"
 							alt="Disponibilidade"
 							className="w-10 h-10 inline-block relative -bottom-1 ml-2 dark:hidden responsive_icon_education"
 						/>
 						{/* Ícone Escuro */}
 						<Icon
-							src="/mortarboard_rose.png"
+							src="/education.png"
 							alt="Disponibilidade"
 							className="w-10 h-10 hidden relative -bottom-1 dark:inline-block  ml-2 responsive_icon_education"
 						/>
 					</h2>
-					<p className="text-xl text-muted-foreground">
-						Minha formação acadêmica
+					<div className="flex items-center justify-center">
+					<p className="text-xl text-muted-foreground font-semibold">
+						My academic background
 					</p>
+					</div>
 				</div>
 
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -86,7 +88,7 @@ export async function EducationSection() {
 							className="group relative bg-card border rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300"
 						>
 							{/* Accent gradient bar */}
-							<div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary/60 to-primary/30 z-10" />
+							<div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#893E70] via-[#893E70]/60 to-[#893E70]/30 z-10" />
 
 							<div className="relative z-10 p-6">
 								{/* Header with logo and basic info */}
@@ -103,10 +105,10 @@ export async function EducationSection() {
 									)}
 
 									<div className="flex-1 min-w-0">
-										<h3 className="text-xl font-bold mb-1 line-clamp-2 group-hover:text-primary transition-colors">
+										<h3 className="text-xl font-bold mb-1 line-clamp-2 text-[#893E70] transition-colors">
 											{edu.degree}
 										</h3>
-										<p className="text-lg font-medium text-primary mb-1">
+										<p className="text-lg font-medium text-[#893E70] mb-1">
 											{edu.institution}
 										</p>
 										{edu.fieldOfStudy && (
@@ -119,7 +121,7 @@ export async function EducationSection() {
 
 								{/* Date and GPA badges */}
 								<div className="flex flex-wrap gap-2 mb-4">
-									<div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted text-sm">
+									<div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#893E70]/10 text-[#893E70] text-sm">
 										<IconCalendar className="w-3.5 h-3.5" />
 										<span>
 											{edu.startDate && formatDate(edu.startDate)} -{" "}
@@ -131,7 +133,7 @@ export async function EducationSection() {
 										</span>
 									</div>
 									{edu.gpa && (
-										<div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">
+										<div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#893E70]/10 text-[#893E70] text-sm font-medium">
 											<IconAward className="w-3.5 h-3.5" />
 											<span>GPA: {edu.gpa}</span>
 										</div>

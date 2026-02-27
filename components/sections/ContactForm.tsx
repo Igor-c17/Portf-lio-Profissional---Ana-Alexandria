@@ -130,12 +130,36 @@ export function ContactForm() {
 				</div>
 
 				<button
-					type="submit"
-					disabled={isPending}
-					className="w-full px-4 py-2 @md/form:px-6 @md/form:py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium text-sm @md/form:text-base disabled:opacity-50 disabled:cursor-not-allowed"
-				>
-					{isPending ? "Enviando…" : "Enviar mensagem"}
-				</button>
+  type="submit"
+  disabled={isPending}
+  className="
+    relative overflow-hidden group
+    w-full px-4 py-2 @md/form:px-6 @md/form:py-3
+    rounded-lg
+    bg-primary text-primary-foreground
+    hover:bg-primary/90
+    hover:scale-105
+    transition-all duration-300
+    font-medium text-sm @md/form:text-base
+    disabled:opacity-50 disabled:cursor-not-allowed
+  "
+>
+  {/* Efeito brilho */}
+  <span className="
+    absolute inset-0
+    bg-white/30
+    rotate-45
+    translate-x-[-100%]
+    group-hover:translate-x-[100%]
+    transition-transform duration-500
+    blur-sm
+  "></span>
+
+  {/* Texto */}
+  <span className="relative z-10">
+    {isPending ? "Enviando…" : "Enviar mensagem"}
+  </span>
+</button>
 			</form>
 		</div>
 	);
