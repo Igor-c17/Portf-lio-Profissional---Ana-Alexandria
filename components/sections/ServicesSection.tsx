@@ -73,35 +73,35 @@ export async function ServicesSection() {
 		<section id="services" className="py-20 px-6 bg-muted/30">
 			<div className="container mx-auto max-w-6xl">
 				<div className="text-center mb-16">
-					<h2 className="text-4xl md:text-5xl font-bold mb-4">
+					<h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#2a65b2]">
 						Serviços
 						{/* Ícone Claro */}
 						<Icon
-							src="/pasta.png"
+							src="/briefcase.png"
 							alt="Disponibilidade"
 							className="w-9 h-9 inline-block relative bottom-1.25 -right-1 ml-2 dark:hidden responsive_icon_services"
 						/>
 						{/* Ícone Escuro */}
 						<Icon
-							src="/pasta_rose.png"
+							src="/briefcase.png"
 							alt="Disponibilidade"
 							className="w-9 h-9 hidden relative bottom-1.25 -right-1 dark:inline-block  ml-2 responsive_icon_services"
 						/>
 					</h2>
 					<p className="text-xl text-muted-foreground font-semibold">
-						What I can do for you
+						What I Can Do For You
 					</p>
 				</div>
 
 				{/* Featured Services */}
 				{featured.length > 0 && (
 					<div className="mb-12">
-						<h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+						<h3 className="text-2xl font-bold mb-6 flex items-center gap-2 text-[#2a65b2]">
 							<Star
 								className="w-6 h-6"
 								style={{
-									color: "oklch(67% 0.13 168)",
-									fill: "oklch(67% 0.13 168)",
+									color: "#2a65b2",
+									fill: "#2a65b2",
 								}}
 							/>
 							Serviços em Destaque
@@ -111,7 +111,7 @@ export async function ServicesSection() {
 								{featured.map((service) => (
 									<div
 										key={service.slug?.current || service.title}
-										className="@container/card bg-card border-2 border-primary/20 rounded-lg p-6 @lg/card:p-8 hover:shadow-xl transition-all hover:scale-[1.02]"
+										className="@container/card bg-card border-2 border-[#2a65b2]/20 rounded-lg p-6 @lg/card:p-8 hover:shadow-xl transition-all hover:scale-[1.02]"
 									>
 										{service.icon && (
 											<div className="relative w-12 h-12 @md/card:w-16 @md/card:h-16 mb-4 @md/card:mb-6">
@@ -124,7 +124,7 @@ export async function ServicesSection() {
 											</div>
 										)}
 
-										<h3 className="text-xl @md/card:text-2xl font-bold mb-3">
+										<h3 className="text-xl @md/card:text-2xl font-bold mb-3 text-[#2a65b2]">
 											{service.title}
 										</h3>
 
@@ -135,14 +135,14 @@ export async function ServicesSection() {
 										)}
 
 										{service.fullDescription && (
-											<div className="prose prose-sm dark:prose-invert mb-6">
+											<div className="prose prose-sm dark:prose-invert mb-6 text-[#2a65b2]">
 												<PortableText value={service.fullDescription} />
 											</div>
 										)}
 
 										{service.features && service.features.length > 0 && (
 											<div className="mb-6">
-												<h4 className="font-semibold mb-3 text-sm @md/card:text-base">
+												<h4 className="font-semibold mb-3 text-sm @md/card:text-base text-[#2a65b2]">
 													Principais Características:
 												</h4>
 												<ul className="space-y-2">
@@ -151,7 +151,7 @@ export async function ServicesSection() {
 															key={`${service.title}-feature-${idx}`}
 															className="flex items-start gap-2"
 														>
-															<IconCheck className="w-4 h-4 @md/card:w-5 @md/card:h-5 text-primary mt-0.5 flex-shrink-0" />
+															<IconCheck className="w-4 h-4 @md/card:w-5 @md/card:h-5 text-[#2a65b2] mt-0.5 flex-shrink-0" />
 															<span className="text-muted-foreground text-sm @md/card:text-base">
 																{feature}
 															</span>
@@ -167,7 +167,7 @@ export async function ServicesSection() {
 													<p className="text-xs @md/card:text-sm text-muted-foreground mb-1">
 														Preço
 													</p>
-													{formatPrice(service.pricing)}
+        											{formatPrice(service.pricing)}
 												</div>
 											)}
 											{service.timeline && (
@@ -175,7 +175,7 @@ export async function ServicesSection() {
 													<p className="text-xs @md/card:text-sm text-muted-foreground mb-1">
 														Cronograma
 													</p>
-													<p className="font-semibold text-sm @md/card:text-base">
+													<p className="font-semibold text-sm @md/card:text-base text-[#2a65b2]">
 														{service.timeline}
 													</p>
 												</div>
@@ -193,7 +193,7 @@ export async function ServicesSection() {
 														return techData?.name ? (
 															<span
 																key={`${service.title}-tech-${idx}`}
-																className="px-2 py-1 @md/card:px-3 text-xs rounded-full bg-primary/10 text-primary"
+																className="px-2 py-1 @md/card:px-3 text-xs rounded-full bg-[#2a65b2]/10 text-[#2a65b2]"
 															>
 																{techData.name}
 															</span>

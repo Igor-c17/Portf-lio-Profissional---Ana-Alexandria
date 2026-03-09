@@ -40,7 +40,7 @@ export function ContactForm() {
 
 	return (
 		<div className="@container/form bg-card border rounded-lg p-4 @md/form:p-6">
-			<h3 className="text-xl @md/form:text-2xl font-semibold mb-6">
+			<h3 className="text-xl @md/form:text-2xl font-semibold mb-6 text-[#893E70]">
 				Envie uma mensagem
 			</h3>
 
@@ -60,7 +60,7 @@ export function ContactForm() {
 				<div>
 					<label
 						htmlFor="name"
-						className="block text-xs @md/form:text-sm font-medium mb-2"
+						className="block text-xs @md/form:text-sm font-medium mb-2 text-[#893E70]"
 					>
 						Nome
 					</label>
@@ -68,7 +68,7 @@ export function ContactForm() {
 						type="text"
 						id="name"
 						name="name"
-						className="w-93 px-3 py-1.5 @md/form:px-4 @md/form:py-2 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary text-sm @md/form:text-base"
+						className="w-93 px-3 py-1.5 @md/form:px-4 @md/form:py-2 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary text-sm @md/form:text-base text-[#893E70]"
 						placeholder="Seu nome"
 						required
 						disabled={isPending}
@@ -78,7 +78,7 @@ export function ContactForm() {
 				<div>
 					<label
 						htmlFor="email"
-						className="block text-xs @md/form:text-sm font-medium mb-2"
+						className="block text-xs @md/form:text-sm font-medium mb-2 text-[#893E70]"
 					>
 						Email
 					</label>
@@ -86,7 +86,7 @@ export function ContactForm() {
 						type="email"
 						id="email"
 						name="email"
-						className="w-93 px-3 py-1.5 @md/form:px-4 @md/form:py-2 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary text-sm @md/form:text-base"
+						className="w-93 px-3 py-1.5 @md/form:px-4 @md/form:py-2 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary text-sm @md/form:text-base text-[#893E70]"
 						placeholder="seu.email@exemplo.com"
 						required
 						disabled={isPending}
@@ -96,7 +96,7 @@ export function ContactForm() {
 				<div>
 					<label
 						htmlFor="subject"
-						className="block text-xs @md/form:text-sm font-medium mb-2"
+						className="block text-xs @md/form:text-sm font-medium mb-2 text-[#893E70]"
 					>
 						Assunto
 					</label>
@@ -104,7 +104,7 @@ export function ContactForm() {
 						type="text"
 						id="subject"
 						name="subject"
-						className="w-93 px-3 py-1.5 @md/form:px-4 @md/form:py-2 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary text-sm @md/form:text-base"
+						className="w-93 px-3 py-1.5 @md/form:px-4 @md/form:py-2 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary text-sm @md/form:text-base text-[#893E70]"
 						placeholder="Sobre qual assunto?"
 						required
 						disabled={isPending}
@@ -114,7 +114,7 @@ export function ContactForm() {
 				<div>
 					<label
 						htmlFor="message"
-						className="block text-xs @md/form:text-sm font-medium mb-2"
+						className="block text-xs @md/form:text-sm font-medium mb-2 text-[#893E70]"
 					>
 						Mensagem
 					</label>
@@ -122,7 +122,7 @@ export function ContactForm() {
 						id="message"
 						name="message"
 						rows={5}
-						className="w-93 px-3 py-1.5 @md/form:px-4 @md/form:py-2 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none text-sm @md/form:text-base"
+						className="w-93 px-3 py-1.5 @md/form:px-4 @md/form:py-2 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none text-sm @md/form:text-base text-[#893E70]"
 						placeholder="Me conte sobre seus projetos..."
 						required
 						disabled={isPending}
@@ -136,8 +136,8 @@ export function ContactForm() {
     relative overflow-hidden group
     w-full px-4 py-2 @md/form:px-6 @md/form:py-3
     rounded-lg
-    bg-primary text-primary-foreground
-    hover:bg-primary/90
+    bg-[#893E70] text-[#893E70]-foreground
+    hover:bg-[#893E70]/90
     hover:scale-105
     transition-all duration-300
     font-medium text-sm @md/form:text-base

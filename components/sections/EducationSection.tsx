@@ -76,7 +76,7 @@ export async function EducationSection() {
 					</h2>
 					<div className="flex items-center justify-center">
 					<p className="text-xl text-muted-foreground font-semibold">
-						My academic background
+						My Academic Background
 					</p>
 					</div>
 				</div>

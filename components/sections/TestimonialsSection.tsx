@@ -59,7 +59,7 @@ export async function TestimonialsSection() {
 					</h2>
 					<div className="flex items-center justify-center">
 						<p className="text-xl text-muted-foreground font-semibold">
-						What people say about working with me
+						What People Say About Working With Me
 					</p>
 					</div>
 				</div>

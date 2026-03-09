@@ -25,24 +25,24 @@ export async function ContactSection() {
 
 			<div className="container mx-auto max-w-4xl">
 				<div className="text-center mb-12">
-					<h2 className="text-4xl md:text-5xl font-bold mb-4">
+					<h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#893E70]">
 						Entre em contato
 						{/* Ícone Claro */}
 						<Icon
-							src="/phone-book.png"
+							src="/info_rose.png"
 							alt="Disponibilidade"
 							className="w-7.5 h-7.5 inline-block relative bottom-0.5 -left-0.5 ml-2 dark:hidden responsive_icon_contact"
 						/>
 						{/* Ícone Escuro */}
 						<Icon
-							src="/phone-book.png"
+							src="/info_rose.png"
 							alt="Disponibilidade"
 							className="w-7.5 h-7.5 hidden relative bottom-0.5 -left-0.5 dark:inline-block  ml-2 responsive_icon_contact"
 						/>
 					</h2>
 					<div className="flex items-center justify-center">
 					<p className="text-xl text-muted-foreground font-semibold">
-						Wherever you are in the world, let's collaborate on your next project.
+						Wherever You Are In The World, Let's Collaborate On Your Next Project.
 					</p>
 					</div>
 				</div>
@@ -51,7 +51,7 @@ export async function ContactSection() {
 					<div className="grid grid-cols-1 @3xl:grid-cols-2 gap-8">
 						{/* Contact Info */}
 						<div className="@container/info space-y-6">
-							<h3 className="text-xl @md/info:text-2xl font-semibold mb-6">
+							<h3 className="text-xl @md/info:text-2xl font-semibold mb-6 text-[#893E70]">
 								Informações de contato
 							</h3>
 
@@ -61,21 +61,21 @@ export async function ContactSection() {
 										<span className="text-xl @md/info:text-2xl">
 											{/* Ícone Claro */}
 											<Icon
-												src="/email_blue.png"
+												src="/correspondencia_rose.png"
 												alt="Disponibilidade"
 												className="w-6 h-6 inline-block relative bottom-0.5 ml-2 dark:hidden reponsive_icon"
 											/>
 
 											{/* Ícone Escuro */}
 											<Icon
-												src="/email_blue.png"
+												src="/correspondencia_rose.png"
 												alt="Disponibilidade"
 												className="w-6 h-6 hidden relative bottom-0.5 dark:inline-block  ml-2 reponsive_icon"
 											/>
 										</span>
 									</div>
 									<div className="min-w-0 relative -top-0.5">
-										<h4 className="font-semibold mb-1 text-sm @md/info:text-base">
+										<h4 className="font-semibold mb-1 text-sm @md/info:text-base text-[#893E70]">
 											Email
 										</h4>
 										<Link
@@ -94,21 +94,21 @@ export async function ContactSection() {
 										<span className="text-xl @md/info:text-2xl">
 											{/* Ícone Claro */}
 											<Icon
-												src="/smartphone.png"
+												src="/telefone_rose.png"
 												alt="Disponibilidade"
 												className="w-7 h-7 inline-block relative ml-2 dark:hidden reponsive_icon"
 											/>
 
 											{/* Ícone Escuro */}
 											<Icon
-												src="/smartphone.png"
+												src="/telefone_rose.png"
 												alt="Disponibilidade"
 												className="w-7 h-7 hidden relative dark:inline-block  ml-2 reponsive_icon"
 											/>
 										</span>
 									</div>
 									<div className="min-w-0 relative -top-0.5">
-										<h4 className="font-semibold mb-0 text-sm @md/info:text-base">
+										<h4 className="font-semibold mb-0 text-sm @md/info:text-base text-[#893E70]">
 											Telefone
 										</h4>
 										<Link

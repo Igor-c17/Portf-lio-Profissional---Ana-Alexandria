@@ -67,7 +67,7 @@ export async function CertificationsSection() {
 					</h2>
 					<div className="flex items-center justify-center">
 					<p className="text-xl text-muted-foreground font-semibold">
-						Professional credentials and certifications
+						Professional Credentials And Certifications
 					</p>
 					</div>
 				</div>

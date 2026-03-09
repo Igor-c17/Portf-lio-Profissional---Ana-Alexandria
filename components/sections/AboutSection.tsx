@@ -53,7 +53,7 @@ export async function AboutSection() {
     						className="w-5.75 h-5.75 relative bottom-px left-1 hidden dark:inline-block"
   						/>
   						<p className="text-xl text-muted-foreground ml-2 font-semibold">
-    						Get to know me better
+    						Get To Know Me Better
   						</p>
 					</div>
 				</div>
