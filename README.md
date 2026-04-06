@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<!-- Badges -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-Production-black?style=for-the-badge&logo=nextdotjs"/>
+  <img src="https://img.shields.io/badge/React-Component--Based-blue?style=for-the-badge&logo=react"/>
+  <img src="https://img.shields.io/badge/TypeScript-Strict--Typed-3178C6?style=for-the-badge&logo=typescript"/>
+  <img src="https://img.shields.io/badge/TailwindCSS-Modern-0F172A?style=for-the-badge&logo=tailwind-css"/>
+  <img src="https://img.shields.io/badge/GSAP-Animations-88CE02?style=for-the-badge&logo=greensock"/>
+</p>
 
-## Getting Started
+<h1 align="center">🌐 Portfolio Profissional</h1>
 
-First, run the development server:
+<p align="center">
+Portfolio moderno desenvolvido para uma cliente real, com foco em performance, experiência do usuário e design profissional.
+</p>
+
+---
+
+# 🚀 Visão Geral
+
+Este projeto consiste em um **portfolio profissional completo**, desenvolvido para apresentar serviços, autoridade profissional e facilitar o contato com potenciais clientes.
+
+Após uma grande atualização estrutural, o projeto recebeu **novas seções estratégicas, melhorias de performance e animações modernas**, tornando a experiência muito mais fluida e envolvente.
+
+O objetivo principal do site é **transmitir profissionalismo, autoridade e conversão de visitantes em clientes.**
+
+---
+
+# 🛠️ Tecnologias Utilizadas
+
+- **Next.js**
+- **React**
+- **TypeScript**
+- **TailwindCSS**
+- **GSAP (GreenSock Animation Platform)**
+
+---
+
+# ⚡ Atualização Estrutural
+
+Nesta nova versão do projeto foram implementadas diversas melhorias importantes:
+
+### 🔥 Novas Seções
+
+O site agora conta com novas áreas estratégicas para melhorar a comunicação e apresentação do serviço:
+
+- **AuthorityLine** → seção focada em transmitir autoridade e credibilidade
+- **BenefitsSection** → apresentação clara dos benefícios oferecidos
+- **MethodSection** → explicação estruturada do método de trabalho
+- **TargetSection** → definição clara do público-alvo
+- **FooterSection** → rodapé reformulado com informações essenciais
+
+---
+
+### ♻️ Seções Atualizadas
+
+Algumas partes principais do site passaram por **refatoração e melhorias estruturais**:
+
+- **HeroSection**
+- **TestimonialSection**
+- **ContactSection**
+- **HeaderSection**
+
+Essas atualizações trouxeram melhor organização de componentes, layout mais limpo e melhor experiência de navegação.
+
+---
+
+# ⚙️ Otimizações Realizadas
+
+Durante a atualização também foram feitas melhorias importantes de performance:
+
+✔️ Remoção das integrações com **Clerk** e **Sanity**, que estavam impactando o desempenho da aplicação  
+✔️ Otimização da estrutura de componentes  
+✔️ Redução de dependências externas  
+✔️ Melhor organização da arquitetura do projeto
+
+---
+
+# 🎨 Experiência do Usuário
+
+A nova versão do portfolio agora conta com:
+
+- ✨ animações suaves com **GSAP**
+- ⚡ navegação mais rápida e fluida
+- 📱 responsividade completa
+- 🎯 melhor fluxo de leitura e conversão
+
+O resultado é uma aplicação muito mais **leve, dinâmica e agradável de utilizar.**
+
+---
+
+# 📌 Objetivo do Projeto
+
+Este portfolio foi desenvolvido para:
+
+- apresentar serviços profissionais
+- reforçar autoridade no mercado
+- melhorar a comunicação com potenciais clientes
+- oferecer uma experiência moderna e intuitiva
+
+---
+
+# 🛠️ Execução do Projeto
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
