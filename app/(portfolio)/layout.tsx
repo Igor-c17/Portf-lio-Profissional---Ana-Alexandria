@@ -10,8 +10,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio Ana Alexandria",
-  description: "Portfolio Ana Alexandria",
+  title: "Ana Alexandria - PFC",
+  description: "Ana Alexandria - PFC",
 };
 
 export default function RootLayout({
