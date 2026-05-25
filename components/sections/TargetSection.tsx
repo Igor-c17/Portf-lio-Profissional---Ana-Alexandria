@@ -110,12 +110,12 @@ const TargetSection: React.FC = () => {
                 <Icon
                   src="/translate.png"
                   alt="Disponibilidade"
-                  className="w-5.75 h-5.75 relative left-1 dark:hidden"
+                  className="w-5.75 h-5.75 relative left-1 dark:hidden target-icon"
                 />
                 <Icon
                   src="/translate_white.png"
                   alt="Disponibilidade"
-                  className="w-5.75 h-5.75 relative left-1 hidden dark:inline-block"
+                  className="w-5.75 h-5.75 relative left-1 hidden dark:inline-block target-icon"
                 />
                 <p className="text-xl text-muted-foreground ml-2 font-semibold">
                   Who Is This Work Intended For?

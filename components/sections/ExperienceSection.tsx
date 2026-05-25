@@ -1,11 +1,13 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { CheckCircle2, GraduationCap, Globe, Target } from "lucide-react";
 import certificado from "@/public/ana.png";
 import { Icon } from "../Icon";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CometCard } from "@/components/ui/comet-card"; // Não esqueça de garantir esse import
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -14,7 +16,7 @@ if (typeof window !== "undefined") {
 const authorityBlocks = [
   {
     id: "block-1",
-    category: "Formação acadêmica",
+    category: "Bacharelado em Ciências da Psicologia",
     description: "Psicologia — Williams Baptist University",
     icon: GraduationCap,
     image: certificado.src,
@@ -35,6 +37,9 @@ const authorityBlocks = [
   },
 ];
 
+// ------------------------------------------------------------------
+// 1. O SEU TILT CARD ORIGINAL (Mantido intacto)
+// ------------------------------------------------------------------
 const TiltCard = ({ block }: { block: (typeof authorityBlocks)[0] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -130,9 +135,115 @@ const TiltCard = ({ block }: { block: (typeof authorityBlocks)[0] }) => {
   );
 };
 
+// ------------------------------------------------------------------
+// 2. NOVO COMPONENTE: COMET ACADEMY CARD (Apenas para Formação)
+// ------------------------------------------------------------------
+const CometAcademyCard = ({
+  block,
+}: {
+  block: (typeof authorityBlocks)[0];
+}) => {
+  const IconComponent = block.icon;
+  return (
+    <CometCard rotateDepth={8} translateDepth={10} className="w-full h-full">
+      {/* Outer Frame - Light Matting */}
+      <div
+        className="relative bg-card border-8 border-card/80 rounded-sm shadow-2xl p-4 h-full"
+        style={{ transformStyle: "preserve-3d" }}
+      >
+        {/* Inner Certificate - Dark Background */}
+        <div className="relative bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-950 dark:from-zinc-950 dark:via-black dark:to-zinc-950 border-2 border-[#893E70]/40 p-8 flex flex-col min-h-[450px] h-full">
+          {/* Decorative Corner Frames - Top Left */}
+          <div className="absolute top-0 left-0 w-20 h-20">
+            <div className="absolute top-3 left-3 w-10 h-10 border-t-2 border-l-2 border-[#893E70]/60" />
+            <div className="absolute top-5 left-5 w-6 h-6 border-t-2 border-l-2 border-[#893E70]/60" />
+          </div>
+
+          {/* Decorative Corner Frames - Top Right */}
+          <div className="absolute top-0 right-0 w-20 h-20">
+            <div className="absolute top-3 right-3 w-10 h-10 border-t-2 border-r-2 border-[#893E70]/60" />
+            <div className="absolute top-5 right-5 w-6 h-6 border-t-2 border-r-2 border-[#893E70]/60" />
+          </div>
+
+          {/* Decorative Corner Frames - Bottom Left */}
+          <div className="absolute bottom-0 left-0 w-20 h-20">
+            <div className="absolute bottom-3 left-3 w-10 h-10 border-b-2 border-l-2 border-[#893E70]/60" />
+            <div className="absolute bottom-5 left-5 w-6 h-6 border-b-2 border-l-2 border-[#893E70]/60" />
+          </div>
+
+          {/* Decorative Corner Frames - Bottom Right */}
+          <div className="absolute bottom-0 right-0 w-20 h-20">
+            <div className="absolute bottom-3 right-3 w-10 h-10 border-b-2 border-r-2 border-[#893E70]/60" />
+            <div className="absolute bottom-5 right-5 w-6 h-6 border-b-2 border-r-2 border-[#893E70]/60" />
+          </div>
+
+          {/* Diamond Accents - Corners */}
+          <div className="absolute top-2 left-2 w-3 h-3 rotate-45 bg-[#1CAE86]/90" />
+          <div className="absolute top-2 right-2 w-3 h-3 rotate-45 bg-[#1CAE86]/90" />
+          <div className="absolute bottom-2 left-2 w-3 h-3 rotate-45 bg-[#1CAE86]/90" />
+          <div className="absolute bottom-2 right-2 w-3 h-3 rotate-45 bg-[#1CAE86]/90" />
+
+          <div className="relative z-10 flex flex-col items-center text-center flex-1 justify-center mt-4">
+            {/* Opcional: Ícone no topo */}
+            <div className="mb-4">
+              <IconComponent className="w-8 h-8 text-[#1CAE86]/80" />
+            </div>
+
+            {/* Certificate Title - Small and Gold at top */}
+            <div className="mb-5">
+              <h4 className="text-lg font-bold text-[#1CAE86]/80 mb-1 uppercase tracking-wide">
+                CERTIFICADO
+              </h4>
+              <p className="text-xs text-[#1CAE86]/80 italic">for</p>
+            </div>
+
+            {/* Certificate Name - Main Subject */}
+            <h3 className="text-2xl font-bold text-white mb-6 leading-tight px-2">
+              {block.category}
+            </h3>
+
+            {/* Description */}
+            <p className="text-sm text-zinc-300/80 mb-6 leading-relaxed">
+              {block.description}
+            </p>
+            <div className="mb-4">
+              <div className="flex flex-wrap justify-center gap-1.5">
+                {/* Badge fixa */}
+                <span className="px-2.5 py-1 text-[10px] bg-[#003d2d]/20 text-[#1CAE86] font-medium border border-[#003d2d]/70">
+                  Psicologia
+                </span>
+              </div>
+            </div>
+
+            {/* Logo Badge (Substituindo cert.logo pela imagem da Ana) */}
+            {block.image && (
+              <div className="relative mt-auto flex items-center justify-center">
+                <div className="relative w-16 h-16 p-1 bg-white/10 rounded-full border border-yellow-600/30">
+                  <div className="relative w-full h-full rounded-full overflow-hidden">
+                    <Image
+                      src={block.image}
+                      alt="Badge"
+                      fill
+                      className="object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-300"
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </CometCard>
+  );
+};
+
+// ------------------------------------------------------------------
+// 3. COMPONENTE PRINCIPAL
+// ------------------------------------------------------------------
 export default function CertificationsSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+
   useEffect(() => {
     if (sectionRef.current) {
       const heading = sectionRef.current.querySelector("h2");
@@ -150,14 +261,12 @@ export default function CertificationsSection() {
         { y: 50, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
       )
-
         .fromTo(
           subtitle,
           { y: 20, opacity: 0 },
           { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" },
           "-=0.4",
         )
-
         .fromTo(
           text,
           { y: 20, opacity: 0 },
@@ -184,6 +293,7 @@ export default function CertificationsSection() {
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
   }, []);
+
   return (
     <section
       id="certificacoes"
@@ -224,7 +334,13 @@ export default function CertificationsSection() {
               }}
               className="h-full"
             >
-              <TiltCard block={block} />
+              {/* CONDIÇÃO MÁGICA AQUI: */}
+              {/* Se for o primeiro bloco (Formação acadêmica), usa o CometCard. Senão, TiltCard */}
+              {block.id === "block-1" ? (
+                <CometAcademyCard block={block} />
+              ) : (
+                <TiltCard block={block} />
+              )}
             </div>
           ))}
         </div>

@@ -12,6 +12,7 @@ import ExperienceSection from "./sections/ExperienceSection";
 import TestimonialSection from "./sections/TestmonialSection";
 import ContactSection from "./sections/ContactSection";
 import FooterSection from "./sections/FooterSection";
+import { CertificationsSection } from "./sections/Certification";
 
 gsap.registerPlugin(ScrollTrigger);
 
