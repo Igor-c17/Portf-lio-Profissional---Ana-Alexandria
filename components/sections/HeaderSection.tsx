@@ -1,18 +1,20 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowRight, Menu, X, Moon, Sun } from "lucide-react";
-import logo from "@/public/logo.png";
+import { ArrowRight, Menu, Moon, Sun, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
+import Image from "next/image";
 // Imports para o Theme
 import { useTheme } from "next-themes";
+import type React from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui//dropdown-menu";
+import logo from "@/public/logo.png";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -136,9 +138,12 @@ const HeaderOne: React.FC = () => {
             onClick={() => scrollToSection("home")}
           >
             <div className="liquid-glass shadow-lg w-14 h-14 sm:w-16 sm:h-16 bg-none rounded-full flex items-center justify-center transition-transform group-hover:scale-105 active:scale-95 overflow-hidden">
-              <img
-                src={logo.src}
+              <Image
+                src={logo}
                 alt="PFC Logo"
+                width={64}
+                height={64}
+                priority
                 className="w-full h-full object-cover"
               />
             </div>

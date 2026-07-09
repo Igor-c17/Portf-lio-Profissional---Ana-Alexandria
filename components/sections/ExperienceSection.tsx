@@ -1,13 +1,14 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { CheckCircle2, GraduationCap, Globe, Target } from "lucide-react";
-import certificado from "@/public/ana.png";
-import { Icon } from "../Icon";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CheckCircle2, Globe, GraduationCap, Target } from "lucide-react";
+import Image from "next/image";
+import type React from "react";
+import { useEffect, useRef, useState } from "react";
 import { CometCard } from "@/components/ui/comet-card"; // Não esqueça de garantir esse import
+import certificado from "@/public/ana.png";
+import { Icon } from "../Icon";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -101,9 +102,11 @@ const TiltCard = ({ block }: { block: (typeof authorityBlocks)[0] }) => {
             className="h-32 w-full relative overflow-hidden flex-shrink-0 border-b border-slate-800"
           >
             <div className="absolute inset-0 bg-slate-900/40 z-10" />
-            <img
+            <Image
               src={block.image}
               alt="Diploma / Ilustração"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="w-full h-full object-cover opacity-60 group-hover:opacity-90 transition-opacity duration-500 mix-blend-luminosity group-hover:mix-blend-normal"
             />
           </motion.div>
@@ -224,6 +227,7 @@ const CometAcademyCard = ({
                       src={block.image}
                       alt="Badge"
                       fill
+                      sizes="64px"
                       className="object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-300"
                     />
                   </div>

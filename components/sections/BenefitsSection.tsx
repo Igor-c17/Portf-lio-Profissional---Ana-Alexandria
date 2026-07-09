@@ -1,8 +1,9 @@
 "use client";
-import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { CheckCircle, Shield, UserCheck, Zap, Heart } from "lucide-react";
+import { CheckCircle, Heart, Shield, UserCheck, Zap } from "lucide-react";
+import type React from "react";
+import { useEffect, useRef } from "react";
 import { Icon } from "../Icon";
 
 if (typeof window !== "undefined") {

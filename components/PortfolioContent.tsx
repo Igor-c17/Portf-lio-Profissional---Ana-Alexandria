@@ -1,18 +1,22 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import dynamic from "next/dynamic";
+import AuthorityLine from "./sections/AuthorityLine";
 import HeaderSection from "./sections/HeaderSection";
 import HeroSection from "./sections/HeroSection";
-import AuthorityLine from "./sections/AuthorityLine";
-import AboutSection from "./sections/AboutSection";
-import MethodSection from "./sections/MethodSection";
-import TargetSection from "./sections/TargetSection";
-import BenefitSection from "./sections/BenefitsSection";
-import ProgramsSection from "./sections/ProgramSection";
-import ExperienceSection from "./sections/ExperienceSection";
-import TestimonialSection from "./sections/TestmonialSection";
-import ContactSection from "./sections/ContactSection";
-import FooterSection from "./sections/FooterSection";
-import { CertificationsSection } from "./sections/Certification";
+
+// Seções abaixo da dobra carregadas dinamicamente
+const AboutSection = dynamic(() => import("./sections/AboutSection"));
+const MethodSection = dynamic(() => import("./sections/MethodSection"));
+const TargetSection = dynamic(() => import("./sections/TargetSection"));
+const BenefitSection = dynamic(() => import("./sections/BenefitsSection"));
+const ProgramsSection = dynamic(() => import("./sections/ProgramSection"));
+const ExperienceSection = dynamic(() => import("./sections/ExperienceSection"));
+const TestimonialSection = dynamic(
+  () => import("./sections/TestmonialSection"),
+);
+const ContactSection = dynamic(() => import("./sections/ContactSection"));
+const FooterSection = dynamic(() => import("./sections/FooterSection"));
 
 gsap.registerPlugin(ScrollTrigger);
 

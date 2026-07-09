@@ -1,10 +1,12 @@
 "use client";
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import DottedMap from "dotted-map";
-import { Send, Mail, Phone, Sparkles } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Mail, Phone, Send, Sparkles } from "lucide-react";
+import type React from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }

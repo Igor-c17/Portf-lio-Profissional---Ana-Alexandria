@@ -1,8 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import ProfileImageSource from "@/public/ProfileImage.png";
 import { BackgroundRippleEffect } from "../ui/background-ripple-effect";
 import TextFlip from "../ui/layout-text-flip";
-import Link from "next/link";
 
 function HeroSection() {
   const profile = {
@@ -93,6 +93,7 @@ function HeroSection() {
                 width={600}
                 height={600}
                 priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="rounded-2xl object-cover"
               />
             </div>

@@ -1,7 +1,9 @@
 "use client";
-import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
+import type React from "react";
+import { useEffect, useRef } from "react";
 import logo from "@/public/logo.png";
 
 if (typeof window !== "undefined") {
@@ -66,9 +68,11 @@ const Footer: React.FC = () => {
         <div className="footer-brand space-y-6 max-w-sm flex flex-col items-center md:items-start">
           <div className="flex items-center gap-4">
             <div className="w-14 h-14  rounded-xl flex items-center justify-center text-white font-bold text-xl ">
-              <img
-                src={logo.src}
+              <Image
+                src={logo}
                 alt="PFC Logo"
+                width={56}
+                height={56}
                 className="w-full h-full object-cover"
               />
             </div>

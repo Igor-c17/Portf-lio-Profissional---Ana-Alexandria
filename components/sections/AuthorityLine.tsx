@@ -1,7 +1,9 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import type React from "react";
+import { useEffect, useRef, useState } from "react";
+
 const items: string[] = [
   "Psicologia",
   "Neuroaprendizado",

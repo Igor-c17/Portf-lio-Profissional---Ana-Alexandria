@@ -1,9 +1,12 @@
 "use client";
-import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
+import type React from "react";
+import { useEffect, useRef } from "react";
 import anaPortrait from "@/public/ana.png";
 import { Icon } from "../Icon";
+
 const AboutSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
   useEffect(() => {
@@ -82,13 +85,11 @@ const AboutSection: React.FC = () => {
         <div className="relative image-wrapper">
           <div className="absolute -top-10 -left-10 w-40 h-40 bg-green/5 rounded-full blur-3xl transition-opacity animate-pulse" />
           <div className="rounded-[20px] overflow-hidden shadow-2xl relative z-10 aspect-4/5">
-            <img
-              src={
-                typeof anaPortrait === "string"
-                  ? anaPortrait
-                  : (anaPortrait as any).src
-              }
+            <Image
+              src={anaPortrait}
               alt="Ana Alexandria"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="w-full h-full object-[center_60%] object-cover hover:scale-105 transition-transform duration-700"
             />
           </div>

@@ -1,15 +1,16 @@
 "use client";
-import React, { useCallback, useEffect, useRef, useState } from "react";
 import {
   AnimatePresence,
   motion,
   useScroll,
   useTransform,
 } from "framer-motion";
-import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
-import { Icon } from "../Icon";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
+import Image from "next/image";
+import React, { useCallback, useEffect, useRef, useState } from "react";
+import { Icon } from "../Icon";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -127,10 +128,12 @@ const AnimatedTestimonials = ({
                 {isActive(index) && (
                   <div className="absolute inset-0 bg-green-500/20 blur-2xl rounded-[3rem] -z-10 animate-pulse" />
                 )}
-                <img
+                <Image
                   src={testimonial.src}
                   alt={testimonial.name}
+                  fill
                   draggable={false}
+                  sizes="(max-width: 768px) 100vw, 500px"
                   className="h-full w-full rounded-[2.5rem] object-cover object-center shadow-2xl border-4 border-white/10 dark:border-slate-800"
                 />
               </motion.div>

@@ -260,8 +260,7 @@
    Floating Dock None
 ======================== */
 
-body
-  > div.group\/sidebar-wrapper.has-data-\[variant\=inset\]\:bg-sidebar.flex.min-h-svh.w-full
+body > div.group\/sidebar-wrapper.has-data-\[variant\=inset\]\:bg-sidebar.flex.min-h-svh.w-full
   > div.hidden.md\:block.fixed.z-30.transition-all.duration-300.pointer-events-none.group\/dock.bottom-4.md\:left-4.md\:translate-x-0.lg\:left-1\/2.lg\:-translate-x-1\/2
   > div
   > a:nth-child(3),

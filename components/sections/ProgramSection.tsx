@@ -1,10 +1,10 @@
 "use client";
-import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { BookOpen, Compass, Briefcase, Globe, Sparkles } from "lucide-react";
-import { Icon } from "../Icon";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { BookOpen, Briefcase, Compass, Globe, Sparkles } from "lucide-react";
+import React, { useEffect, useRef } from "react";
+import { Icon } from "../Icon";
 
 gsap.registerPlugin(ScrollToPlugin);
 

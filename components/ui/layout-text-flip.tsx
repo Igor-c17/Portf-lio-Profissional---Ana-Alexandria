@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import type React from "react";
+import { useEffect, useState } from "react";
 
 interface TextFlipProps {
   words: string[];
@@ -25,7 +26,7 @@ const TextFlip: React.FC<TextFlipProps> = ({
 
   return (
     <span
-      className={`relative inline-block  overflow-hidden align-middle rounded-lg border border-foreground bg-foreground/10 px-3 py-2 backdrop-blur-sm" ${className}`}
+      className={`relative inline-block overflow-hidden align-middle rounded-lg border border-[#a34380] bg-[#a34380]/10 px-3 py-2 backdrop-blur-sm" ${className}`}
     >
       <AnimatePresence mode="wait">
         <motion.span
